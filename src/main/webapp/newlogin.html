@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>New Login Greeting</title>
+</head>
+<body>
+
+
+<form action="/MVC_war/greetingPost" method="post" autocomplete="off">
+
+    Enter the name <input name="name" type="text" placeholder="Name"> <br>
+    Enter the password <input name="hobby" type="text" placeholder="Hobby"> <br>
+    <button name="submit">Submit</button>
+</form>
+
+<script> $(window).bind("pageshow", function () {
+    var form = $('form');
+// let the browser natively reset defaults
+    form[0].reset();
+});
+</script>
+</body>
+</html>

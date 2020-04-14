@@ -2,6 +2,8 @@ package controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -17,6 +19,15 @@ public class GreetingController {
         student.setHobby("football");
         model.addObject("name", student);
         return model;
+    }
+
+    @PostMapping("/greetingPost")
+    public ModelAndView greetingPost(@ModelAttribute Student student) {
+
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName("greeting");
+        modelAndView.addObject("name", student);
+        return modelAndView;
     }
 
 }

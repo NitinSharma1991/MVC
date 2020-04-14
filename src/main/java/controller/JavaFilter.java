@@ -11,7 +11,7 @@ import java.io.IOException;
 
 
 @Order(Ordered.HIGHEST_PRECEDENCE)
-@WebFilter(urlPatterns = {"/*"})
+@WebFilter(urlPatterns = {"/greeting"})
 public class JavaFilter implements Filter {
 
     private static final Logger log = LoggerFactory.getLogger(JavaFilter.class);
