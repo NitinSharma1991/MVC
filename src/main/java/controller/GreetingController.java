@@ -12,7 +12,10 @@ public class GreetingController {
     public ModelAndView greeting(@RequestParam(name = "name", required = false, defaultValue = "World") String name) {
         ModelAndView model = new ModelAndView();
         model.setViewName("greeting");
-        model.addObject("name", name);
+        Student student = new Student();
+        student.setName(name);
+        student.setHobby("football");
+        model.addObject("name", student);
         return model;
     }
 
