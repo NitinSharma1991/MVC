@@ -1,17 +1,19 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/html">
+<html lang="en" xmlns="http://www.w3.org/1999/html" xmlns:c="http://www.w3.org/1999/XSL/Transform">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>New Login Greeting</title>
 </head>
 <body>
 
-
+<br>
 <form action="/MVC_war/greetingPost" method="post" autocomplete="off">
-
-    Enter the name <input name="name" type="text" placeholder="Name"> <br>
-    Enter the password <input name="hobby" type="text" placeholder="Hobby"> <br>
-    <button name="submit">Submit</button>
+    <div>
+        <b style="color: cadetblue"> Enter the name </b>
+        <input style="color: blue" name="name" type="text" placeholder="Name"> <br>
+        Enter the password <input name="hobby" type="password" placeholder="Hobby"> <br>
+        <button name="submit">Submit</button>
+    </div>
 </form>
 
 <script> $(window).bind("pageshow", function () {

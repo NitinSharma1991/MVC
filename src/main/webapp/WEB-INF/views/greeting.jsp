@@ -23,5 +23,14 @@ The sum of two number is <%= add(10, 5)%>
 <%@include file="hello.jsp" %>
 <%@include file="objects.jsp" %>
 <%=b%>
+
+<form action="/MVC_war/greetingPost" method="post" autocomplete="off">
+    <div>
+        <b style="color: #4fa025"> Enter the name </b>
+        <input style="color: #ff417e" name="name" type="text" placeholder="Name"> <br>
+        Enter the password <input name="hobby" type="password" placeholder="Hobby"> <br>
+        <button name="submit">Submit</button>
+    </div>
+</form>
 </body>
 </html>
